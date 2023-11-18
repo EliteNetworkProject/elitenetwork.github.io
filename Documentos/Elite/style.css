@@ -1,0 +1,249 @@
+@font-face {
+  font-family: 'capellaital';
+  src: url('./fonts/capella/capellaital.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'impact';
+  src: url('./fonts/impact/Impact.ttf') format('truetype');
+}
+
+body {
+  margin: 0;
+  font-family: 'capellaital', Arial, sans-serif;
+  background-color: black;
+  overflow: hidden;
+}
+
+.icon img.girlfriend {
+  width: 100%;
+  max-height: 20vh;
+  object-fit: cover;
+  object-position: 60% 35%;
+}
+
+
+
+
+.metallicText {
+  font-size: 2.5vw;
+  position: absolute;
+  top: 5.6%;
+  left: 17%;
+  transform: translate(-50%, -50%);
+  color: transparent;
+  background: linear-gradient(to right, #b4b4b4, #dbdbdb, #ffffff);
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+/* Ajuste para pantallas medianas y grandes */
+@media screen and (max-width: 1200px) {
+  .login_form_container {
+    width: 70%;
+    max-width: 600px;
+  }
+
+  .eliteFont {
+    font-size: 2vw;
+  }
+}
+
+/* Ajuste para pantallas pequeñas */
+@media screen and (max-width: 600px) {
+  .login_form_container {
+    width: 90%;
+  }
+
+  .eliteFont {
+    font-size: 3vw;
+  }
+}
+
+@keyframes tickerh {
+  0% {
+    transform: translate3d(0, 0, 200%);
+  }
+  100% {
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+
+@keyframes colorOscillation {
+  0% {
+    color: #000000;
+    background-color: rgb(255, 255, 255);
+  }
+  50% {
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+  }
+  100% {
+    color: #000000;
+    background-color: rgb(255, 255, 255);
+  }
+}
+
+.hwrap {
+  overflow: hidden;
+  position: relative;
+}
+
+.hmove {
+  display: flex;
+  animation: tickerh linear 7s infinite;
+  width: 200%;
+}
+
+.hitem {
+  flex-shrink: 0;
+  width: 25%;
+  box-sizing: border-box;
+  padding: 10px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  animation: colorOscillation 20s linear infinite;
+  font-family: 'impact', Arial, sans-serif;
+  font-size: 30px;
+  line-height: 0.5; /* Ajusta según sea necesario */
+}
+
+.login_form_container {
+  position: relative;
+  width: 400px;
+  height: 470px;
+  max-width: 400px;
+  max-height: 470px;
+  background: #000000;
+  border-radius: 5px 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin-top: 70px;
+  transform: skew(-10deg, 0deg) translateX(-50%);
+  left: 50%;
+}
+.login_logo {
+  width: 90px; /* Ajusta el ancho según sea necesario */
+  height: auto; /* Esto mantiene la proporción original de la imagen */
+  margin-bottom: 20px; /* Ajusta el margen según sea necesario */
+  position: absolute;
+  left: 20px;
+  
+}
+
+
+.login_form_container::before,
+.login_form_container::after {
+  position: absolute;
+  width: 170%;
+  height: 170%;
+  content: "";
+  background-image: conic-gradient(transparent, transparent, transparent, #ffffff);
+  animation: rotate_border 6s linear infinite;
+}
+
+.login_form_container::after {
+  animation-delay: -3s;
+}
+
+@keyframes rotate_border {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.login_form {
+  position: absolute;
+  content: "";
+  background-color: #000000d3;
+  border-radius: 5px 5px;
+  inset: 1px;
+  padding: 50px 40px;
+  z-index: 5;
+  color: #ffffff;
+}
+
+h2 {
+  font-size: 40px;
+  font-weight: 600;
+  text-align: right;
+  margin-top: 30px;
+}
+
+.input_group {
+  margin-top: 40px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+
+.input_text {
+  width: 95%;
+  height: 20px;
+  background: transparent;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #ffffff;
+  font-size: 20px;
+  padding-left: 10px;
+  color: #ffffff;
+}
+
+::placeholder {
+  font-size: 15px;
+  color: #ffffff;
+  letter-spacing: 2px;
+}
+
+.fa {
+  font-size: 10px;
+}
+
+#login_button {
+  position: relative;
+  width: 300px;
+  height: 40px;
+  transition: 1s;
+  margin-top: 60px;
+}
+
+#login_button a {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  z-index: 10;
+  cursor: pointer;
+  font-size: 22px;
+  letter-spacing: 2px;
+  border: 1px solid #ffffff;
+  border-radius: 50px;
+  background-color: #000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fotter {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.fotter a {
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.glowIcon {
+  text-shadow: 0 0 10px #ffffff;
+}
+
